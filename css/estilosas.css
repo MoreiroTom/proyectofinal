@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: black; }
+
+main {
+  background-color: #fffdfd; }
+
+p {
+  font-weight: 500;
+  font-family: "Ubuntu";
+  text-align: justify;
+  font-size: 15px;
+  line-height: 15px; }
+
+.table {
+  color: black; }
+
+.contactform {
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 10%;
+  color: black;
+  font-family: "Ubuntu";
+  grid-area: formulario; }
+
+.nav {
+  background-color: #d6d6d6; }
+  .nav .nav__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0; }
+  .nav .nav__item {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Ubuntu"; }
+  .nav .nav__link {
+    text-decoration: none;
+    color: black; }
+
+.footer {
+  background-color: #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .footer .footer__item {
+    margin-left: 8px;
+    color: #3b3939; }
+
+.maintitle, .rankingHeader {
+  color: rgba(0, 0, 0, 0.651);
+  text-align: center;
+  font-family: "Ubuntu"; }
+
+.rankingHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media only screen and (max-width: 599px) {
+  #grilla {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 13% 10% 67% 10%;
+    grid-template-areas: "header" "menu" "main" "footer"; }
+  header {
+    grid-area: header; }
+  .logoRadio {
+    height: 70%;
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 40px; }
+  .nav {
+    grid-area: menu;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+    .nav .nav__list {
+      flex-direction: column; }
+  main {
+    grid-area: main; }
+  .footer {
+    grid-area: footer; }
+  .logoRadio:hover {
+    transform: rotate(45deg);
+    transition: 5s; }
+  h1 {
+    padding: 15px; }
+  #grillaNoticias {
+    display: grid;
+    height: 95%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "noticia1" "noticia2" "noticia3" "noticia4";
+    align-items: flex-end;
+    margin: auto;
+    text-align: center;
+    align-items: center; }
+  .imagenesMain {
+    height: 150px;
+    width: 300px; }
+  #grillaRanking {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 45% 5% 45%;
+    grid-template-areas: "ranking1" "tabla1" "ranking2" "tabla2"; }
+  #table1 {
+    grid-area: tabla1; }
+  #table2 {
+    grid-area: tabla2; }
+  #grillaConcierto {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "concierto1" "concierto2" "concierto3" "concierto4";
+    align-items: center;
+    justify-items: center; }
+  .imgConcierto {
+    width: 350px;
+    height: 300px;
+    display: block;
+    margin: auto; } }
+
+@media only screen and (min-width: 600px) {
+  #grilla {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 10% 75% 15%;
+    grid-template-areas: "header" "menu" "main" "footer"; }
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: center; }
+  .nav {
+    grid-area: menu;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    z-index: 1; }
+    .nav .nav__list {
+      flex-direction: row; }
+  main {
+    grid-area: main; }
+  .footer {
+    grid-area: footer; }
+  .logoRadio {
+    width: 200px;
+    height: 200px; }
+  .logoRadio:hover {
+    transform: rotate(45deg); }
+  #grillaNoticias {
+    display: grid;
+    height: 95%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "noticia1" "noticia2" "noticia3" "noticia4";
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  #grillaRanking {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 45% 5% 45%;
+    grid-template-areas: "ranking1" "tabla1" "ranking2" "tabla2"; }
+  #table1 {
+    grid-area: tabla1; }
+  #table2 {
+    grid-area: tabla2; }
+  #grillaConcierto {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "concierto1  concierto2" "concierto3  concierto4";
+    align-items: center;
+    justify-items: center; }
+  .imgConcierto {
+    width: 300px;
+    height: 400px;
+    display: block;
+    margin: auto; }
+  .imagenesMain {
+    height: 350px;
+    width: 450px; } }
+
+@media only screen and (min-width: 1200px) {
+  #grilla {
+    display: grid;
+    height: 2000px;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 2% 86% 7%;
+    grid-template-areas: "header" "menu" "main" "footer"; }
+  header {
+    grid-area: header;
+    justify-content: flex-start; }
+  .nav {
+    grid-area: menu;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    z-index: 1; }
+    .nav .nav__list {
+      flex-direction: row; }
+  main {
+    grid-area: main; }
+  .footer {
+    grid-area: footer; }
+  .logoRadio {
+    grid-area: header;
+    height: 115px;
+    width: 115px; }
+  .logoRadio:hover {
+    transform: rotate(45deg);
+    transition: 2s; }
+  #grillaNoticias {
+    display: grid;
+    width: 80%;
+    height: 95%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "noticia1  noticia2" "noticia3 noticia4" "noticia5 noticia6";
+    margin: auto; }
+  .imagenesMain {
+    height: 350px;
+    width: 450px; }
+  #grillaRanking {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% 95%;
+    grid-template-areas: "ranking1  ranking2" "tabla1    tabla2";
+    align-items: flex-start; }
+  .table {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px; }
+  #grillaConcierto {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "concierto1  concierto2" "concierto3  concierto4";
+    align-items: center;
+    justify-items: center; }
+  .imgConcierto {
+    width: 400px;
+    height: 500px;
+    display: block;
+    margin: auto; }
+  #grillaContacto {
+    display: grid;
+    height: 45%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "formulario redes";
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  .contactHeader {
+    margin-bottom: 80px; }
+  h1 {
+    margin-top: 30px; } }
